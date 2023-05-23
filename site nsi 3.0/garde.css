@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.back{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.back video {
+position: absolute;
+min-height: 100%;
+min-width: 100%;
+top: 50%;
+left: 50%;
+z-index: -100;
+transform: translate(-50%,-50%);
+}
+
+.back::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:#000000c2;
+    z-index: -99;
+    }
+
+.barre {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 300px;
+    cursor: pointer;
+    margin-left: -10%;
+}
+
+.barre ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.barre ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+
+}
+
+.barre ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.barre ul li :hover::after{
+    width: 100%;
+
+}
+.bouton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.bouton a {
+position: relative;
+background: #fff;
+color: #000;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 1.5em;
+letter-spacing: 0.1em;
+font-weight: 400;
+padding: 10px 30px;
+transition: 0.9s;
+
+}
+
+.bouton :hover{
+    letter-spacing: 0.30em;
+    background: var(--clr);
+    box-shadow: 0 0  300px var(--clr);
+
+}
